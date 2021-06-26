@@ -1,0 +1,40 @@
+h1 {
+    font-family: "Garamond",  serif;
+
+color: dodgerblue;
+font-size: 80px;
+margin: 5px;
+}
+
+#img1 {
+    position:absolute;
+    right:0;
+    top:0;
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
+#img2 {
+    position:absolute;
+    left:0;
+    top:0;
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+}
+#form{
+    position: absolute;
+    top: 400px;
+    left: 400px;
+}
+
+#d1{
+    background-color: white;
+    width: 85%;
+    height: 15rem;
+    max-height: 10rem;
+    position:absolute;
+    top: 480;
+    font-size: 20px;
+    overflow: auto;
+}

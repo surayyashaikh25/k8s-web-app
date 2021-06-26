@@ -1,0 +1,94 @@
+<html>
+
+
+<head>
+	<title>Docker Web</title>
+  <link rel="stylesheet" href="./css/scale.css">
+  <link rel="stylesheet" href="./css/heading.css">
+  <link rel="stylesheet" href="./css/button.css">
+  <link rel="stylesheet" href="./css/column.css">
+  <link rel="stylesheet" href="./css/checkbox.css">
+  <link rel="stylesheet" href="./css/textfield.css">
+  <link rel="icon" href="https://img.icons8.com/fluent/240/000000/docker.png" sizes="25x25" type="image/png">
+<img id="img1" src="https://img.icons8.com/fluent/240/000000/docker.png"/>
+<img id="img2" src="https://img.icons8.com/fluent/240/000000/docker.png"/>
+
+  <script src='./js/toggleFunc.js';></script>
+  <script src='./js/contCreate.js';></script>
+  <script src='./js/contStop.js';></script>
+  <script src='./js/contRemove.js';></script>
+  <script src='./js/listImg.js';></script>
+  <script src='./js/listCont.js';></script>
+  <script src='./js/prompt.js';></script>
+
+</head>
+
+<body style="background-image: url('https://wallpaperaccess.com/full/278869.jpg')">
+<center>
+  <h1 style="background-color:black; color:white;" ><u>Docker Web Portal</u></h1>
+</center>
+<div class="column" style="">
+    <center>
+    <button class="button" onclick="createToggle()">Create a Container</button></center>
+   
+    <div id="create" style="display:none;">
+        <input id='c1' type="text" placeholder="Container name" ><br>  
+        <input id='c2' type="text" placeholder="Image name"><br> 
+        <label  class="container">d - detatched
+            <input id ='cb1' type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label  class="container">i - interactive
+            <input id ='cb2' type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label  class="container">t - terminal
+            <input id ='cb3' type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label> 
+       <center><button class="button" type="submit" onclick="createContVal()">Submit</button></center>
+    </div>
+
+  </div>
+
+  <div class="column" >
+    <center>
+    <button class="button" onclick="execToggle()">Stop a Container</button>
+    <div id="exec" style="display:none;">
+        <input id="c3" type="text" placeholder="Container name"><br>  
+        <button class="button" onclick="stopContVal()" type="submit">Submit</button>
+    </div>
+</center>
+  </div>
+  <div class="column" >
+    <center>
+    <button class="button" onclick="removeToggle()">Remove a Container</button>
+    <div id="remove" style="display:none;">
+        <input id="c4" type="text" placeholder="Container name"><br>  
+        <button class="button" onclick="removeContVal()"  type="submit">Submit</button>
+    </div>
+</center>
+  </div>
+   <div>  
+    <center>
+    <button class="button" onclick="listImg()" >List all Images</button>
+</center>
+  <center>
+	  <button  class="button" onclick="listCont()" > List all Containers </button><br><br>
+  </center>
+  </div>
+  <div>
+<div id="form">
+	<center><input id="input1" name="command" placeholder="Enter Your Commands" onkeyup="autoType()"
+	style="width: 200%; height: 5%; font-family: inherit; border-radius: 0.4rem; text-align: center;
+    font-size:20px;"/></center>
+	<br>
+	 <center><button id="but" onclick="docker()" style="vertical-align:middle; font-size:15px;"><span>Submit</span></button></center>
+</div>
+<pre>
+	<div id="d1"><p id="para">[root@localhost ~]# </p></div>
+</pre>
+<br><br><br>
+  </div>
+</body>
+</html>

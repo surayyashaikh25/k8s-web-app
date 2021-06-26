@@ -1,0 +1,8 @@
+.column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    margin: 5;
+    height: 240px;
+    background-image: url("https://www.thebalancesmb.com/thmb/mqAuJZnRPPJcz7U8aFfA-Th2V6c=/3862x2578/filters:fill(auto,1)/cloud-computing-502462262-5ac1130e119fa800371ba0a8.jpg");
+  }
